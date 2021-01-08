@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LexShopCore", "LexShopCore\LexShopCore.csproj", "{37BD6E60-9F8C-43DA-A48C-5ADD29D581E0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LexShop.Core", "LexShopCore\LexShop.Core.csproj", "{37BD6E60-9F8C-43DA-A48C-5ADD29D581E0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LexShop.Services", "LexShop.Services\LexShop.Services.csproj", "{8543DE1C-5E22-44F9-889A-641E3930EAFE}"
 EndProject

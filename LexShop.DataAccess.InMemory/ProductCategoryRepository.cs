@@ -15,7 +15,7 @@ namespace LexShop.DataAccess.InMemory
 
         public ProductCategoryRepository()
         {
-            productCategories = cache["productsCategory"] as List<ProductCategory>;
+            productCategories = cache["productCategories"] as List<ProductCategory>;
             if (productCategories == null)
             {
                 productCategories = new List<ProductCategory>();
@@ -24,7 +24,7 @@ namespace LexShop.DataAccess.InMemory
         }
         public void Commit()
         {
-            cache["productCategory"] = productCategories;
+            cache["productCategories"] = productCategories;
         }
         public void Insert(ProductCategory productCategory)
         {

@@ -29,6 +29,8 @@ namespace LexShop.WebUI.Controllers
 
             return View(productCategory);
         }
+
+        [HttpPost]
         public ActionResult Create(ProductCategory productCategory)
         {
             if (!ModelState.IsValid)
@@ -76,6 +78,37 @@ namespace LexShop.WebUI.Controllers
                     context.Commit();
                     return Redirect("Index");
                 }
+            }
+        }
+
+        public ActionResult Delete(string ID)
+        {
+            ProductCategory productCategoryToDelete = context.Find(ID);
+
+            if (productCategoryToDelete == null)
+            {
+                return HttpNotFound();
+            }
+            else
+            {
+                return View(productCategoryToDelete);
+            }
+        }
+
+        [HttpPost,ActionName("Delete")]
+        public ActionResult confirmDelete(string ID)
+        {
+            ProductCategory productCategoryToDelete = context.Find(ID);
+
+            if (productCategoryToDelete == null)
+            {
+                return HttpNotFound();
+            }
+            else
+            {
+                context.Delete(ID);
+                context.Commit();
+                return RedirectToAction("Index");
             }
         }
 

@@ -11,10 +11,10 @@ namespace LexShop.WebUI.Controllers
     public class ProductCategoryManagerController : Controller
     {
         ProductCategoryRepository context;
+        ProductCategoryManagerController productCategories;
         public ProductCategoryManagerController()
         {
             context = new ProductCategoryRepository();
-
         }
         public ActionResult Index()
         {

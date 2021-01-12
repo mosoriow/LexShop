@@ -49,6 +49,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Datacontext.cs" />
+    <Compile Include="Migrations\202101121332173_Inicial.cs" />
+    <Compile Include="Migrations\202101121332173_Inicial.Designer.cs">
+      <DependentUpon>202101121332173_Inicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -60,6 +65,11 @@
       <Project>{37bd6e60-9f8c-43da-a48c-5add29d581e0}</Project>
       <Name>LexShop.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202101121332173_Inicial.resx">
+      <DependentUpon>202101121332173_Inicial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

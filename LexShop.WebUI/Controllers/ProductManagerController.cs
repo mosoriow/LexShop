@@ -4,9 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using LexShop.Core.Models;
-using LexShop.DataAccess.InMemory;
 using LexShop.Core.ViewModel;
 using LexShop.Core.Contracts;
+//using LexShop.DataAccess.InMemory;
+using LexShop.DataAccess.SQL;
 
 namespace LexShop.WebUI.Controllers
 {

@@ -55,6 +55,8 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SQLRepository.cs" />
+    <Compile Include="SQLRepositoryOld.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 
 namespace LexShop.Core.Models
 {
@@ -17,7 +18,8 @@ namespace LexShop.Core.Models
         [Range(0,1000)]
         public decimal Price { get; set; }
         public string Category { get; set; }
-        public string Image { get; set; }
 
+        public string Image { get; set; }
+        //public HttpPostedFile Image { get; set; }
     }
 }

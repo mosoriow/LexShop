@@ -1,0 +1,75 @@
+﻿@model IEnumerable<LexShop.Core.Models.Product>
+
+@{
+    ViewBag.Title = "Basket";
+}
+
+<h2>Your Basket</h2>
+
+<p>
+    @Html.ActionLink("Checkout", "Checkout")
+</p>
+
+
+<table class="table">
+    <tr>
+        <th>
+            &nbsp;
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            Amount
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            Sub total
+        </th>
+        <th>&nbsp;</th>
+    </tr>
+
+    @{ double totalAmount = 0.0; }
+
+
+    @foreach (var item in Model)
+    {
+        totalAmount += 1.0 * Convert.ToDouble(item.Price);
+        <tr>
+            <td>
+                <img class="img-thumbnail" style="height:50px" src="~/Content/ProductImages/@item.Image" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                1
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+            </td>
+        </tr>
+    }
+    <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td><strong>Total:</strong></td>
+        <td>
+            <strong>$@totalAmount</strong>
+        </td>
+        <td>&nbsp;</td>
+    </tr>
+
+</table>
+<p>
+    @Html.ActionLink("Checkout", "Checkout")
+</p>

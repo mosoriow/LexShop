@@ -13,7 +13,7 @@ namespace LexShop.WebUI.Controllers
     public class ProductCategoryManagerController : Controller
     {
         IRepository<ProductCategory> context;
-        ProductCategoryManagerController productCategories;
+        //ProductCategoryManagerController productCategories;
         public ProductCategoryManagerController(IRepository<ProductCategory> context)
         {
             this.context = context;
@@ -78,7 +78,7 @@ namespace LexShop.WebUI.Controllers
                 {
                     productCategoryToEdit.Category = productCategory.Category;
                     context.Commit();
-                    return Redirect("Index");
+                    return RedirectToAction("Index");
                 }
             }
         }

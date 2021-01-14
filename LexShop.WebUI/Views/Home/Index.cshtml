@@ -1,4 +1,4 @@
-﻿@model IEnumerable < LexShop.Core.Models.Product>
+﻿@model LexShop.Core.ViewModel.ProductListViewModel
 
 @{
     ViewBag.Title = "Home Page";
@@ -6,8 +6,19 @@
 
 <h1>Products</h1>
 
+<div>
+    <h4>Filter by Category</h4>
+    <div class="list-group">
+        @Html.ActionLink("All", "Index", null, new { @class=Request["Category"]==null?"list-group-item active" : "list-group-item"})
+        @foreach(var cat in Model.ProductCategories)
+        {
+            @Html.ActionLink(cat.Category, "Index", new { Category = cat.Category }, new { @class=Request["Category"] == cat.Category?"list-group-item active": "list-group-item" })
+        }
+    </div>
+</div>
+
 <div class="container">
-    @foreach (var item in Model)
+    @foreach (var item in Model.Products)
     {
         <div class="col-md-4">
             <div style="height:450px; padding:10px; margin:2px; border:solid thin whitesmoke;">

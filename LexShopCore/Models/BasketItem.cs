@@ -10,6 +10,6 @@ namespace LexShop.Core.Models
     {
         public string BasketID { get; set; }
         public string ProductID { get; set; }
-        public uint Quantity { get; set; }
+        public int Quantity { get; set; }
     }
 }
